@@ -1,0 +1,40 @@
+<%- include('partials/head') %>
+<form class="container" action="/contato/send" method="POST">
+    <div class="card my-5">
+        <div class="card-header">
+            <h1 class="card-title text-primary">Contato</h1>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label>Assunto:</label>
+                <select id="ddl-assunto" class="form-control" name="assunto" required>
+                    <option value="">Selecione...</option>
+                    <option>Reclamação</option>
+                    <option>Devolução</option>
+                    <option>Troca</option>
+                    <option>Sugestão</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Título</label>
+                <input id="txt-titulo" type="text" name="titulo" class="form-control" placeholder="digite o titulo..." required>
+                <span id="txt-titulo-error" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input id="txt-email" type="text" name="email" class="form-control" placeholder="digite o email..." required>
+                <span id="txt-email-error" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Mensagem:</label>
+                <textarea id="txa-mensagem" name="mensagem" class="form-control" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <button class="btn" type="reset">Limpar</button>
+            <button class="btn btn-outline-primary">Enviar</button>
+        </div>
+    </div>
+</form>
+<%- include('partials/footer') %>
